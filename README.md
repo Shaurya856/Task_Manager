@@ -14,8 +14,7 @@ This project requires Node.js and npm. Follow these steps to get started:
 
 ```sh
 # Clone the repository
-git clone <YOUR_REPO_URL>
-
+git clone https://github.com/ShauryaSucksAtGames/Task_Manager
 # Navigate to the project directory
 cd Task_Manager
 
@@ -34,6 +33,36 @@ After running these commands, the application will be available at `http://local
 - **Projects**: Create and manage projects with detailed tracking
 - **Calendar**: Schedule and organize your tasks on a calendar view
 - **Finance**: Track expenses and manage budgets
+
+## Data Storage
+
+This application uses browser local storage to save your data. Here's what you should know:
+
+### Managing Your Data
+
+- **Viewing stored data**: You can inspect the application's stored data in your browser's developer tools:
+  1. Open browser developer tools (F12 or right-click > Inspect)
+  2. Navigate to Application > Storage > Local Storage
+  3. Look for keys prefixed with `task-manager-`
+
+- **Clearing data**: If you need to reset the application or clear your data:
+  1. From the application: Navigate to Settings > Clear All Data
+  2. Manually via browser: Open developer tools > Application > Local Storage > Right-click on the domain > Clear
+
+- **Data backup**: To backup your data before clearing:
+  1. Open browser developer tools
+  2. Go to Application > Local Storage
+  3. Right-click on the domain and select "Export"
+
+- **Data limitations**: Local storage is limited to approximately 5MB per domain, so avoid storing large attachments
+
+- **Privacy note**: Your data remains on your device and is not sent to any servers
+
+### Data Persistence
+
+- Data is tied to your browser and device
+- Clearing browser data will erase application data
+- Using incognito/private browsing will not save data between sessions
 
 ## Technologies
 
