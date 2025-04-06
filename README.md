@@ -27,6 +27,50 @@ npm run dev
 
 After running these commands, the application will be available at `http://localhost:8080`.
 
+## Project Structure
+
+```
+Task_Manager/
+├── public/                  # Static assets
+│   └── ...
+├── src/                     # Source code
+│   ├── assets/              # Images, fonts, and other static files
+│   │   ├── ui/              # Base UI components from shadcn/ui
+│   │   ├── layout/          # Layout components (Header, Footer, etc.)
+│   │   ├── features/        # Feature-specific components
+│   │   └── ...
+│   ├── contexts/            # React context providers
+│   │   ├── AuthContext.tsx  # Authentication context
+│   │   └── ...
+│   ├── pages/               # Application pages/routes
+│   │   ├── Dashboard.tsx    # Dashboard page
+│   │   ├── Projects.tsx     # Projects page
+│   │   ├── Calendar.tsx     # Calendar page
+│   │   ├── Finance.tsx      # Finance page
+│   │   ├── Login.tsx        # Login/Registration page
+│   │   └── ...
+│   ├── lib/                 # Utility libraries and functions
+│   │   ├── utils.ts         # General utility functions
+│   │   └── ...
+│   ├── utils/               # Helper functions and hooks
+│   │   ├── animations.ts    # Animation utilities
+│   │   └── ...
+│   ├── types/               # TypeScript type definitions
+│   ├── App.tsx              # Main application component
+│   ├── index.css            # Global styles
+│   └── main.tsx             # Application entry point
+├── components.json          # shadcn/ui configuration
+├── tailwind.config.ts       # Tailwind CSS configuration
+├── tsconfig.json            # TypeScript configuration
+├── vite.config.ts           # Vite configuration
+├── package.json             # Project metadata and dependencies
+├── package-lock.json        # Locked dependency versions (npm)
+├── bun.lockb                # Locked dependency versions (Bun)
+├── SETUP.md                 # Detailed setup instructions
+├── requirements.md          # Project dependencies
+└── README.md                # Project documentation
+```
+
 ## Features
 
 - **Dashboard**: View your tasks, projects, and upcoming deadlines at a glance
@@ -75,6 +119,24 @@ This project is built with:
 - **Tailwind CSS**: Utility-first CSS framework
 - **React Router**: Routing library for React
 - **Recharts**: Charting library for data visualization
+
+## Package Management
+
+This project supports two package managers:
+
+- **npm**: The default Node.js package manager
+  ```sh
+  npm install
+  npm run dev
+  ```
+
+- **Bun**: A faster JavaScript runtime and package manager
+  ```sh
+  bun install
+  bun run dev
+  ```
+
+The presence of both `package-lock.json` and `bun.lockb` files allows you to choose either package manager based on your preference.
 
 ## Deployment
 
