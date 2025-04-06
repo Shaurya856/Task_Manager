@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { useIntersectionObserver } from '@/utils/animations';
 import { LucideIcon, Circle, Layers, LineChart, Zap } from 'lucide-react';
@@ -13,23 +12,23 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: Circle,
-    title: "Less, but Better",
-    description: "Focus on the essential aspects of your product, removing the unnecessary. Simplicity isn't about being simple, but about achieving maximum effect with minimum means."
+    title: "Simple and Effective",
+    description: "Our application focuses on the essential features you need, without unnecessary complexity. Get more done with an intuitive interface."
   },
   {
     icon: Layers,
-    title: "Thoughtful Details",
-    description: "Every detail matters. From the perfect pixel spacing to carefully crafted interactions, we believe that excellence is in the details most people overlook."
+    title: "Quality Design",
+    description: "We pay attention to the details that matter, from layout to interactions, creating a seamless experience that works for you."
   },
   {
     icon: LineChart,
-    title: "Form Follows Function",
-    description: "Design should serve the purpose first. Beauty emerges not from decoration, but from elegant solutions to complex problems."
+    title: "Practical Solutions",
+    description: "Our design prioritizes functionality first. Each feature serves a clear purpose to help you manage your tasks efficiently."
   },
   {
     icon: Zap,
-    title: "Innovation & Clarity",
-    description: "Push boundaries while maintaining clarity. True innovation doesn't confuse users—it delights them with new possibilities that feel intuitive."
+    title: "Modern Interface",
+    description: "Enjoy a clean, modern interface that makes task management straightforward and accessible for all users."
   }
 ];
 
@@ -53,10 +52,10 @@ const Features = () => {
             isHeadingVisible ? "animate-fade-in-up" : ""
           )}
         >
-          <span className="subtle-text inline-block px-4 py-1.5 rounded-full bg-primary/5 mb-4">Core Principles</span>
-          <h2 className="heading-lg mb-6">Design Philosophy</h2>
+          <span className="subtle-text inline-block px-4 py-1.5 rounded-full bg-primary/5 mb-4">Key Features</span>
+          <h2 className="heading-lg mb-6">Task Manager Features</h2>
           <p className="text-lg text-muted-foreground">
-            The essence of good design lies in clarity, purpose, and harmony. These principles guide our approach to creating timeless experiences.
+            Our application provides the tools you need to organize your tasks and improve productivity with a clean, intuitive interface.
           </p>
         </div>
         
