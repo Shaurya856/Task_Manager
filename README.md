@@ -150,7 +150,3 @@ You can deploy this application using any hosting service that supports React ap
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
