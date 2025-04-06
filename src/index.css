@@ -1,0 +1,156 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 6% 13%;
+    --foreground: 210 20% 98%;
+
+    --card: 228 6% 16%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 228 6% 16%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 235 85% 65%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 228 6% 20%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 228 6% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 235 85% 65%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 228 6% 22%;
+    --input: 228 6% 22%;
+    --ring: 235 85% 65%;
+
+    --radius: 0.5rem;
+    
+    --sidebar-background: 228 6% 12%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 235 85% 65%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 235 80% 62%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 228 6% 20%;
+    --sidebar-ring: 235 85% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-card/70 backdrop-blur-lg border border-border shadow-xl;
+  }
+  
+  .glass-card {
+    @apply glass-panel rounded-lg transition-all duration-400 hover:shadow-2xl;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12;
+  }
+  
+  .heading-xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  
+  .heading-md {
+    @apply text-xl sm:text-2xl font-bold;
+  }
+  
+  .subtle-text {
+    @apply text-sm uppercase tracking-wider text-muted-foreground font-medium;
+  }
+  
+  .button-hover-effect {
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg active:translate-y-0 active:shadow-md;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-foreground hover:bg-accent/20 transition-colors;
+  }
+
+  .sidebar-item.active {
+    @apply bg-accent/30 text-white;
+  }
+
+  .dashboard-card {
+    @apply p-4 rounded-lg bg-card border border-border shadow-sm hover:shadow-md transition-all;
+  }
+
+  .task-item {
+    @apply flex items-center justify-between p-3 my-1 rounded-md bg-secondary border border-border hover:border-accent/50 transition-all;
+  }
+
+  .priority-high {
+    @apply border-l-4 border-l-red-500;
+  }
+
+  .priority-medium {
+    @apply border-l-4 border-l-yellow-500;
+  }
+
+  .priority-low {
+    @apply border-l-4 border-l-green-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+}
